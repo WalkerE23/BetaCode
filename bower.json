@@ -1,0 +1,17 @@
+{
+  "name": "BetaCode",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootstrap": "latest",
+    "font-awesome": "latest",
+    "animate.css": "latest",
+    "angular": "latest",
+    "angular-route": "latest",
+    "angular-resource": "latest",
+    "ng-file-upload-shim": "~9.0.7",
+    "ng-file-upload": "~9.0.7"
+  },
+  "resolutions": {
+    "ng-file-upload-shim": "~9.0.7"
+  }
+}

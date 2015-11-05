@@ -1,0 +1,65 @@
+<!-- public/views/home.html -->
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4"></div>
+			<div class="col-lg-4">
+
+				<div class="row" id="mainBlock">
+					<form ng-submit="submit()">
+					<div class="col-md-12" id="title">
+						<b>Generate Access Code</b>
+					</div>
+					<div class="col-md-6 form-group">
+						<input type="text" class="text form-control in" placeholder="First Name" ng-model="firstName">
+					</div>
+					<div class="col-md-6 form-group">
+						<input type="text" class="text form-control in" placeholder="Last Name" ng-model="lastName">
+					</div>
+					<div class="col-md-12">
+						<button class="btn btn-default submitButton" type="submit">Submit</button>
+					</div>
+					</form>
+					<div class="col-md-12" id="access_code">
+						<label class="codeResp">{{code}}</label>
+					</div>
+				</div>
+				<div class="divider"></div>
+				<div class="row" id="receiptBlock" ng-show="success">
+					<div class="row">
+						<div class="col-sm-6">Name</div>
+						<div class="col-sm-6"style="text-align:right">{{firstName}} {{lastName}}</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6">Access Code:</div>
+						<div class="col-sm-6"style="text-align:right">{{code}}</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6">Status:</div>
+						<div class="col-sm-6"style="text-align:right">Saved!</div>
+					</div>
+					<div class="row"><div class="col-sm-12" style="text-align:right">Usable 1 Time</div></div>
+				</div>
+				<div class="row" ng-show="fail">
+						<div class="col-sm-6">Status:</div>
+						<div class="col-sm-6"style="text-align:right"><b>FAILED TO SAVE</b></div>
+				</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+			</div>
+			<div class="col-lg-4"></div>
+		</div>
+	</div>
+</body>

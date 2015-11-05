@@ -1,0 +1,28 @@
+{
+  "name": "BetaCode",
+  "version": "1.0.0",
+  "main": "server.js",
+  "dependencies": {
+    "express": "~4.5.1",
+    "mongoose": "~3.8.0",
+    "method-override": "~1.0.0",
+    "sendgrid": "^1.8.0",
+    "passport": "~0.2.0",
+    "passport-local": "^1.0.0",
+    "connect-flash": "^0.1.1",
+    "bcrypt-nodejs": "0.0.3",
+    "morgan": "~1.0.0",
+    "body-parser": "~1.4.2",
+    "cookie-parser": "~1.0.0",
+    "express-session": "~1.0.0",
+    "path": "^0.11.14",
+    "ejs": "^2.3.2",
+    "jsonwebtoken": "^5.0.4",
+    "promise": "^7.0.3",
+    "underscore-node": "^0.1.2",
+    "ng-file-upload": "^6.2.1"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}
