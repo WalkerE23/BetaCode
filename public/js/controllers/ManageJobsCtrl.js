@@ -5,11 +5,11 @@ angular.module('ManageJobsCtrl', [])
 		function($scope, $resource, $routeParams, $http){
 			$http({
 				method:'GET',
-				url:'/api/adminJobs'
+				url:'/api/allProfiles'
 			}).success(function(res){
 				if(res.success){
 					console.log(res);
-					$scope.allJobs = res.obj;
+					$scope.allProfs = res.obj;
 				}
 			}).error(function(err){
 				console.log(err);

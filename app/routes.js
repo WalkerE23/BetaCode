@@ -6,5 +6,7 @@ module.exports = function(app){
 	app.put('/api/getCode',g_ss.getCode);
 	app.get('/api/adminJobs',g_ss.getAllAdminJobs);
 	app.post('/api/createNewJob',g_ss.createNewJob);
+
+	app.get('/api/allProfiles',g_ss.showProfiles);
    
 };

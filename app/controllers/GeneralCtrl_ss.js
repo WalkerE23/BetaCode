@@ -4,6 +4,7 @@
 var betacode = require('../models/betacode_model.js');
 var OpenJob = require('../models/openjob.js');
 var Admin = require('../models/admin_model.js');
+var Profile = require('../models/profile_model.js');
 var RandomCodes = require('random-codes');
 var config = {
     // A string containing available chars 
@@ -73,10 +74,20 @@ module.exports.getAllAdminJobs = function(req,res){
                 res.send({success:true,obj:newList});
             }
             });
-            
         }
     })
 }
+
+ module.exports.showProfiles = function(req,res){
+    Profile.find({},function(err,result){
+        if(!err){
+            res.send({success:true,obj:result});
+        }
+        else{
+            res.send({success:false});
+        }
+    });
+ }
 
 
 
