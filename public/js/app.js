@@ -3,5 +3,5 @@
 angular.module('BetaCode', 
 	['ngRoute','ngResource','appRoutes',
 
-	'MainCtrl']
+	'MainCtrl','CreateJobCtrl','ManageJobsCtrl']
 );

@@ -1,0 +1,86 @@
+<!-- createJob.html -->
+
+<div id="top_area">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                
+            </div>
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li><a href="/createJob"><span>Create Job</span></a></li>
+                    <li><a href="/manageJobs"><span>Manage Jobs</span></a></li>
+                    <li><a ng-href="/">Codes</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<div>
+	<form ng-submit="createJob()">
+	    <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Create New Project</h4>
+	        <p>Please note all fields are editable after creation</p>
+	    </div>
+	    <div class="modal-body">
+	        <div class="row form-group">
+	            <div class="col-md-6" id="jobCreationDivs">
+	                Name:<input class="form-control"type='text' placeholder="Project Name" ng-model="jobName"></input>
+	            </div>
+	            <div class="col-md-6" id="jobCreationDivs">
+	                Location:<input class="form-control" type='text' size="17" placeholder="Project Location" ng-model="jobLocation"></input>
+	            </div>
+	            <div class="col-md-6" id="jobCreationDivs">
+	                Description:<textarea class="form-control" placeholder="Add a short project description" ng-model="description" style="resize: none"></textarea>
+	            </div>
+	            <div class="col-md-6" id="jobCreationDivs">
+	                Project Type:
+	                <select ng-model="jobType" class="form-control">
+	                    <option value="Short">Short</option>
+	                    <option value="Feature">Feature</option>
+	                    <option value="Commercial">Commercial</option>
+	                    <option value="Webisode">Webisode</option>
+	                    <option value="Theater">Theater</option>
+	                    <option value="Other">Other</option>
+	                </select>
+	            </div>
+	            <div class="col-md-6" id="jobCreationDivs"></div>
+	            <div class="col-md-6" id="jobCreationDivs">
+	                Director:<input class="form-control" type="text" placeholder="Director" ng-model="director"></input>
+	            </div>
+	            <div class="col-md-6" id="jobCreationDivs"></div>
+	            <div class="col-md-6" id="jobCreationDivs">
+	                Producer:<input class="form-control"type="text" placeholder="Producer" ng-model="producer"></input>
+	            </div>  
+	            <div class="col-md-6" id="jobCreationDivs"></div>
+	            <div class="col-md-6" id="jobCreationDivs">
+	                Writer:<input class="form-control"type="text" placeholder="Writer" ng-model="writer"></input>
+	            </div>
+	            <div class="col-md-5" id="jobCreationDivs">
+	                Start date:<input class="form-control"type='date' ng-model="jobStart"></input>
+	            </div>
+	            <div class="col-md-5" id="jobCreationDivs">
+	                End date:<input class="form-control" type='date' ng-model="jobEnd"></input>
+	            </div>
+	            <div class="col-md-2" id="jobCreationDivs">
+	                <label><input type="checkbox" style="margin-top:20px;"ng-model="noDates">No set dates</label>
+	            </div>
+	            <div class="col-md-12" id="jobCreationDivs" style="margin-top:10px">
+	                Contact Email or Phone:<input class="form-control" type='text' ng-model="jobContact"></input>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="modal-footer">
+	        <div>
+	            <div class="col-md-6">
+	                <alert ng-repeat="alert in alerts" type="{{alert.type}}">{{alert.msg}}</alert>
+	            </div>
+	        </div>
+	        <div class="col-md-6">
+	                <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="cancelJob()">Cancel</button>
+	            <button type="submit" class="btn btn-primary">Create Job</button>
+	        </div>
+	    </div>
+	</form>
+</div>

@@ -1,0 +1,29 @@
+
+<div id="top_area">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            </div>
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li><a href="/createJob"><span>Create Job</span></a></li>
+                    <li><a href="/manageJobs"><span>Manage Jobs</span></a></li>
+                    <li><a ng-href="/">Codes</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="container">
+	<div class="row" style="height:40px;border-bottom:1px solid" ng-repeat="job in allJobs">
+		<div class="col-md-3">     
+            {{job.id}}
+        </div>
+        <div class="col-md-3">
+            {{job.name}}
+        </div>
+        <div class="col-md-3">
+            {{job.contact_email}}
+        </div>
+	</div>
+</div>
