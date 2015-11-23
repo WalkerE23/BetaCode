@@ -53,13 +53,13 @@ module.exports.createNewJob = function(req,res){
     job.save(function(err,result){
         if(!err&&result){
             console.log("saved" + result);
-
-            Admin.findOneAndUpdate({_id: admin_id},
-                {$push:{'open_jobs': result._id}},function(err, prof){
-                        if(!err&&prof){
-                            res.send({success:true});
-                        }
-            });
+            res.send({success:true});
+            // Admin.findOneAndUpdate({_id: admin_id},
+            //     {$push:{'open_jobs': result._id}},function(err, prof){
+            //             if(!err&&prof){
+            //                 res.send({success:true});
+            //             }
+            // });
         }
     });
 }

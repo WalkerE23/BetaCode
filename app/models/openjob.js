@@ -3,8 +3,8 @@ var Schema = mongoose.Schema;
 
 
 var OpenJobSchema = new Schema({
-	adminJob:true,
-	owner_name: String,
+	owner: String,
+	adminJob:{type:Boolean,default:true},
 	name: String,
 	location: String,
 	email: String,
@@ -16,9 +16,10 @@ var OpenJobSchema = new Schema({
 	type: String,
 	positions_to_fill:[{
 		position: String,
-		payment: Number,		
-		pay_rate: String,
+		payment:{type:Number,default:null},		
+		pay_rate:{type:String,default:null},
 		payNegotiable:{type:Boolean,default:false},
+		noPay:{type:Boolean,default:true},
 		notes:String,
 		experience: String,
 		equipment: String,
