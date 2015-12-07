@@ -29,7 +29,10 @@ angular.module('CreateJobCtrl', [])
 						owner: "56424a2ad4477d730b70494b",
 						owner_name:"IndieLoop",
 						name: $scope.jobName,
-						location: $scope.jobLocation,
+						location: {
+							city:$scope.jobLocCty,
+							state:$scope.jobLocSt
+						},
 						startDate: $scope.jobStart,
 						endDate: $scope.jobEnd,
 						contact_email: $scope.jobContact,

@@ -6,7 +6,10 @@ var OpenJobSchema = new Schema({
 	owner: String,
 	adminJob:{type:Boolean,default:true},
 	name: String,
-	location: String,
+	location: {
+		city:String,
+		state:String
+	},
 	email: String,
 	contact_email: String,
 	startDate: Date,
