@@ -1,2 +1,2 @@
 # BetaCode
-Beta Code
+Offsite tools for Indieloop Alpha and Beta
